@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-native-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password

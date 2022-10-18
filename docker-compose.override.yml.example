@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  mysql:
+    ports:
+      # Default MySQL ports
+      - 3306:3306
+    volumes:
+      # Uncomment this to use a local folder as a volume to store the db
+      - ./nativedb:/var/lib/mysql
+      - ./docker/mysql:/docker-entrypoint-initdb.d:ro
